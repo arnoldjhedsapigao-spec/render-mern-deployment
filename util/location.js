@@ -20,7 +20,6 @@ async function getCoordsForAddress(address) {
   }
 
   const { lat, lon } = response.data[0];
-  console.log(`Address: ${address}\nLat: ${lat}, Lon: ${lon}`);
   const lng = lon;
   return { lat, lng };
 }

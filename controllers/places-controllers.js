@@ -10,8 +10,6 @@ const User = require("../models/user");
 const place = require("../models/place");
 
 const getPlaceById = async (req, res, next) => {
-  console.log("GET request in places.");
-
   const placeId = req.params.pid;
 
   let place;
