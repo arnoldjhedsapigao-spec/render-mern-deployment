@@ -1,4 +1,3 @@
-//const { v4: uuidv4 } = require("uuid");
 const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
@@ -48,7 +47,7 @@ const signup = async (req, res, next) => {
 
   if (existingUser) {
     const httpError = new HttpError(
-      "User exists already, please login instead",
+      "User exists already, please login instead.",
       422,
     );
     return next(httpError);

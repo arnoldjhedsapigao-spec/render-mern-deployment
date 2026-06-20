@@ -3,11 +3,6 @@ const axios = require("axios");
 const HttpError = require("../models/http-error");
 
 async function getCoordsForAddress(address) {
-  // return {
-  //   lat: 40.7484474,
-  //   lng: -73.9871516
-  // };
-
   const url = `https://nominatim.openstreetmap.org/search?addressdetails=1&q=${encodeURIComponent(address)}&format=jsonv2&limit=1`;
 
   const response = await axios.get(url, {

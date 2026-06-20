@@ -1,20 +1,16 @@
 const fs = require("fs");
 const path = require("path");
-
 const express = require("express");
 const app = express();
-
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 const placesRoutes = require("./routes/places-routes");
 const usersRoutes = require("./routes/users-routes");
-
 const HttpError = require("./models/http-error");
 
 const PORT = process.env.PORT || 5000;
 
-//Once parsed, the data is made available through the req.body property in your route handlers
 app.use(bodyParser.json());
 
 app.use("/uploads/images", express.static(path.join("uploads", "images")));
